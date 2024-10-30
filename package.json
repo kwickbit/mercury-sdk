@@ -28,10 +28,10 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
+    "@dotenvx/dotenvx": "^1.21.0",
     "@stellar/stellar-sdk": "^12.1.0",
     "axios": "^1.6.2",
     "bigint-conversion": "^2.4.3",
-    "dotenv": "^16.3.1",
     "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",
     "typedoc-plugin-missing-exports": "^2.2.0",

@@ -1,8 +1,7 @@
 import { Mercury } from "./Mercury";
 import { factoryInstanceParser, pairInstanceParser } from ".";
-import dotenv from "dotenv";
 import { ApiResponse, ParsedRouterEntry } from "./types";
-dotenv.config();
+import "dotenv/config";
 
 (async function () {
   const mercuryInstance = new Mercury({

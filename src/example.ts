@@ -8,8 +8,7 @@ import {
   getLiquidityPoolDepositParser,
   getContractEventsParser,
 } from ".";
-import dotenv from "dotenv";
-dotenv.config();
+import "dotenv/config";
 
 (async function () {
   const mercuryArgs = {
@@ -20,6 +19,7 @@ dotenv.config();
   };
 
   const mercuryInstance = new Mercury(mercuryArgs);
+  console.log(mercuryInstance);
 
   const publicKey = "GBDJYBFPYUY7XXI5XCT473VJRT7PRGMRA2AJ2TKUKGPLJ5ZGVPJYKEAR";
   const publicKey2 = "GARDNDBY2VPXVQ46JJR52LNLFHIRQCQZATAYGOERKM4YBWZRUKIJ73BC";
