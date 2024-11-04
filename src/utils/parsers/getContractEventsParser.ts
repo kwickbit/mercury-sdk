@@ -1,4 +1,4 @@
-import { GetContractEventsResponse } from "../../types";
+import type { GetContractEventsResponse } from "../../types";
 import { scValToJs } from "../convert";
 import * as StellarSdk from "@stellar/stellar-sdk";
 

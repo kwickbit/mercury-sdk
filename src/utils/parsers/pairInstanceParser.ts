@@ -1,4 +1,4 @@
-import { ContractEntriesResponse, PairEntry } from "../../types";
+import type { ContractEntriesResponse, PairEntry } from "../../types";
 import { scValToJs } from "../convert";
 import * as StellarSdk from "@stellar/stellar-sdk";
 

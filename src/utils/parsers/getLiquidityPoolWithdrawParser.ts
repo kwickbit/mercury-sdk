@@ -1,4 +1,4 @@
-import { LiquidityPoolWithdrawByPublicKeyResponse } from "../../types/liquidityPool";
+import type { LiquidityPoolWithdrawByPublicKeyResponse } from "../../types/liquidityPool";
 
 export interface getLiquidityPoolWithdrawParsed {
   source?: number;

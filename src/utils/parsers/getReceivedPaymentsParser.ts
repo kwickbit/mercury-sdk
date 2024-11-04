@@ -1,4 +1,4 @@
-import { GetReceivedPaymentsResponse } from "../../types";
+import type { GetReceivedPaymentsResponse } from "../../types";
 import { stellarAssetId } from "../convert";
 import * as StellarSdk from "@stellar/stellar-sdk";
 

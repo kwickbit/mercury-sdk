@@ -1,4 +1,4 @@
-import { GetPathPaymentsStrictReceiveByPublicKeyResponse } from "../../types";
+import type { GetPathPaymentsStrictReceiveByPublicKeyResponse } from "../../types";
 
 export interface getPathPaymentsStrictReceiveParsed {
   from?: string;

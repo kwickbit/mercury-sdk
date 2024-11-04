@@ -1,4 +1,4 @@
-import { ZephyrTableOriginal, ZephyrTableGraphQL } from "../../types";
+import type { ZephyrTableOriginal, ZephyrTableGraphQL } from "../../types";
 /**
  * Parses ZephyrTableOriginal to ZephyrTableGraphQL
  * @param data - ZephyrTableOriginal

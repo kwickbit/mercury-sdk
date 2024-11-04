@@ -1,14 +1,14 @@
 import { Mercury } from "./Mercury";
 import { factoryInstanceParser, pairInstanceParser } from ".";
-import { ApiResponse, ParsedRouterEntry } from "./types";
+import type { ApiResponse, ParsedRouterEntry } from "./types";
 import "dotenv/config";
 
 (async function () {
   const mercuryInstance = new Mercury({
-      backendEndpoint: process.env.MERCURY_BACKEND_ENDPOINT!,
-      graphqlEndpoint: process.env.MERCURY_GRAPHQL_ENDPOINT!,
-      apiKey: process.env.MERCURY_API_KEY,
-    });
+    backendEndpoint: process.env.MERCURY_BACKEND_ENDPOINT!,
+    graphqlEndpoint: process.env.MERCURY_GRAPHQL_ENDPOINT!,
+    apiKey: process.env.MERCURY_API_KEY,
+  });
 
   const factoryAddress = "CBKUBVV5KBJP7Q6I5RRQAEWNQLMWRF6MMRQA7V2C3TPF2USGMSGI77NL";
   const pairAddress = "CDYLINP2CX64S2YC4CCI44XH4H7K6Z2WB5UV3U33VIK36T7YATR2QTXP";

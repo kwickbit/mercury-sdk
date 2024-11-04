@@ -1,4 +1,4 @@
-import { ContractEntriesResponse, ParsedRouterEntry } from "../../types";
+import type { ContractEntriesResponse, ParsedRouterEntry } from "../../types";
 import { scValToJs } from "../convert";
 import * as StellarSdk from "@stellar/stellar-sdk";
 /**
