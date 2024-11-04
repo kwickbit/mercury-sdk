@@ -1,4 +1,4 @@
-import { AssetBy } from "./pathPayments";
+import type { AssetBy } from "./pathPayments";
 
 export interface GetReceivedPaymentsResponse {
   paymentsToPublicKey: PaymentsData;

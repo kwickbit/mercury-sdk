@@ -1,4 +1,4 @@
-import { GraphQLClientRequestHeaders } from "graphql-request/build/esm/types";
+import type { GraphQLClientRequestHeaders } from "graphql-request/build/esm/types";
 
 export interface GraphQLRequestArgs {
   body: { request: string; variables?: any };

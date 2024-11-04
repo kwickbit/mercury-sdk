@@ -1,4 +1,4 @@
-import { GetSentPaymentsResponse } from "../../types";
+import type { GetSentPaymentsResponse } from "../../types";
 import { stellarAssetId } from "../convert";
 
 export interface getSentPaymentsParsed {

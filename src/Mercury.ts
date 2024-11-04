@@ -1,6 +1,6 @@
 import axios, { AxiosError } from "axios";
 import { GraphQLClient } from "graphql-request";
-import {
+import type {
   ApiResponse,
   backendRequestArgs,
   GetPathPaymentsStrictSendByPublicKeyResponse,
@@ -19,7 +19,7 @@ import {
   ContractEntriesResponse,
   SubscribeToMultipleLedgerEntriesArgs,
 } from "./types";
-import { SubscribeToContractEventsArgs } from "./types/subscriptions";
+import type { SubscribeToContractEventsArgs } from "./types/subscriptions";
 import { toSnakeCase } from "./utils";
 import { QUERIES } from "./graphql";
 
