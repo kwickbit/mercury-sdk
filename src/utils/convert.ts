@@ -183,3 +183,7 @@ export function hexToString(hex: string) {
   const trimmedString = convertedString.replace(/\0+$/, ""); // Remove trailing zeros
   return trimmedString;
 }
+
+export function parseXdr(valueToParse: string) {
+  return scValToJs(xdr.ScVal.fromXDR(valueToParse, "base64"));
+}
