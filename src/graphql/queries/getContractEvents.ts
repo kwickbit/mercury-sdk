@@ -1,8 +1,8 @@
 import { gql } from "graphql-request";
 
 export const GET_CONTRACT_EVENTS = gql`
-  query MyQuery {
-    eventByContractId(searchedContractId: "CONTRACT_ID") {
+  query MyQuery($contractId: String) {
+    eventByContractId(searchedContractId: $contractId) {
       nodes {
         contractId
         data
