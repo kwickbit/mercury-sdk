@@ -30,6 +30,8 @@ interface MercuryOptions {
   shouldFetchApiKey?: boolean;
   jwt?: string;
   apiKey?: string;
+  debugGraphqlRequest?: boolean;
+  debugGraphqlResponse?: boolean;
 }
 
 export class Mercury {
@@ -65,8 +67,31 @@ export class Mercury {
     }
 
     this._backendEndpoint = options.backendEndpoint;
-    this._graphqlClient = new GraphQLClient(options.graphqlEndpoint + "/graphql");
     this._defaultMaxSingleSize = options.defaultMaxSingleSize ?? 2000;
+    this._graphqlClient = this._configureGraphqlClient(options);
+  }
+
+  private _configureGraphqlClient({
+    debugGraphqlRequest,
+    debugGraphqlResponse,
+    graphqlEndpoint,
+  }: MercuryOptions): GraphQLClient {
+    const middlewares = {
+      requestMiddleware: (request: any) => {
+        if (debugGraphqlRequest) {
+          console.log("Raw GraphQL Request:", request);
+        }
+        return request;
+      },
+      responseMiddleware: (response: any) => {
+        if (debugGraphqlResponse) {
+          console.log("Raw GraphQL Response:", response);
+        }
+        return response;
+      },
+    };
+
+    return new GraphQLClient(graphqlEndpoint + "/graphql", middlewares);
   }
 
   /**
