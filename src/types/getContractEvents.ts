@@ -9,10 +9,16 @@ export interface EventByContractID {
 export interface Node {
   contractId: string;
   data: string;
-  ledger: number;
-  ledgerTimestamp: number;
   topic1: string;
   topic2: string;
-  topic3: string;
-  topic4: string;
+  txInfoByTx?: {
+    ledgerByLedger?: {
+      closeTime: number;
+      sequence: number;
+    };
+    memo: string;
+    txHash: string;
+    opCount: number;
+    fee: string;
+  };
 }

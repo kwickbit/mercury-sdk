@@ -10,7 +10,7 @@ export const getContractEventsParser = (data: GetContractEventsResponse) =>
     return Object.assign(baseObject, {
       topic1: parseXdr(node.topic1),
       topic2: parseXdr(node.topic2),
-      ledger: node.ledger,
-      timestamp: node.ledgerTimestamp,
+      ledger: node.txInfoByTx?.ledgerByLedger?.sequence,
+      timestamp: node.txInfoByTx?.ledgerByLedger?.closeTime,
     });
   });
