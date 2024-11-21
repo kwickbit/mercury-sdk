@@ -9,10 +9,10 @@ export const GET_FULL_ACCOUNT_SUBSCRIPTIONS = gql`
           data
           ledger
           ledgerTimestamp
-          topic2
           topic1
-          topic4
+          topic2
           topic3
+          topic4
         }
       }
     }

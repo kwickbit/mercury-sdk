@@ -10,7 +10,9 @@ export interface Node {
   contractId: string;
   data: string;
   topic1: string;
-  topic2: string;
+  topic2?: string;
+  topic3?: string;
+  topic4?: string;
   txInfoByTx?: {
     ledgerByLedger?: {
       closeTime: number;
