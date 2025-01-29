@@ -56,7 +56,7 @@ Subscribe to full accounts:
 
 ```typescript
 mercuryInstance.subscribeToFullAccount({
-  address: "someStellarAddress",
+  publicKey: "someStellarAddress",
 });
 ```
 

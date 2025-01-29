@@ -24,3 +24,13 @@ export interface Node {
     fee: string;
   };
 }
+
+export interface ContractEvent {
+  [key: string]: unknown;
+  topic1: string;
+  topic2: string;
+  topic3: string;
+  topic4: string;
+  ledger?: number;
+  timestamp?: number;
+}

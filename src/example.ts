@@ -19,64 +19,63 @@ import "dotenv/config";
   };
 
   const mercuryInstance = new Mercury(mercuryArgs);
-  console.log(mercuryInstance);
 
-  // const publicKey = "GBDJYBFPYUY7XXI5XCT473VJRT7PRGMRA2AJ2TKUKGPLJ5ZGVPJYKEAR";
-  // const publicKey2 = "GARDNDBY2VPXVQ46JJR52LNLFHIRQCQZATAYGOERKM4YBWZRUKIJ73BC";
-  // const routerContractAddress = "CCKXLDNKPXWJZP5YMHGDOQJDKVJIF4T44BQIZRTBFYUIKVE4CYHU47BK";
+  const publicKey = "CBWBMT446XONZMZIDEFGAPQHSAUKC5EY6PCPUJWBE3NYDL73RSYUWYDQ";
+  const publicKey2 = "GBNMAM4CAWHSMMTHD5SNG3ACXWOWNKQLCHXWZVE6EQB7Q26SZM6Z6JCQ";
+  const routerContractAddress = "CC6WRJYMZA574TOXNO2ZWU4HIXJ5OLKGB7JF556RKMZPSV2V62SLBTPK";
 
-  // const sentPaymentsResponse = await mercuryInstance.getSentPayments({
-  //   publicKey,
-  // });
+  const sentPaymentsResponse = await mercuryInstance.getSentPayments({
+    publicKey,
+  });
 
-  // if (sentPaymentsResponse.ok) {
-  //   const sentPaymentsParsedData = getSentPaymentsParser(sentPaymentsResponse.data!);
-  //   console.log("sentPaymentsParsedData");
-  //   console.log(JSON.stringify(sentPaymentsParsedData, null, 2) + "\n");
-  // }
+  if (sentPaymentsResponse.ok) {
+    const sentPaymentsParsedData = getSentPaymentsParser(sentPaymentsResponse.data!);
+    console.log("sentPaymentsParsedData");
+    console.log(JSON.stringify(sentPaymentsParsedData, null, 2) + "\n");
+  }
 
-  // //Received payments
-  // const receivedPaymentsResponse = await mercuryInstance.getReceivedPayments({
-  //   publicKey,
-  // });
+  //Received payments
+  const receivedPaymentsResponse = await mercuryInstance.getReceivedPayments({
+    publicKey,
+  });
 
-  // if (receivedPaymentsResponse.ok) {
-  //   const receivedPaymentsParsedData = getReceivedPaymentsParser(receivedPaymentsResponse.data!);
-  //   console.log("receivedPaymentsParsedData");
-  //   console.log(JSON.stringify(receivedPaymentsParsedData, null, 2) + "\n");
-  // }
+  if (receivedPaymentsResponse.ok) {
+    const receivedPaymentsParsedData = getReceivedPaymentsParser(receivedPaymentsResponse.data!);
+    console.log("receivedPaymentsParsedData");
+    console.log(JSON.stringify(receivedPaymentsParsedData, null, 2) + "\n");
+  }
 
-  // //Liquidity Pool Withdraw
-  // const liquidityPoolWithdrawResponse = await mercuryInstance.getLiquidityPoolWithdraw({
-  //   publicKey: publicKey2,
-  // });
+  //Liquidity Pool Withdraw
+  const liquidityPoolWithdrawResponse = await mercuryInstance.getLiquidityPoolWithdraw({
+    publicKey: publicKey2,
+  });
 
-  // if (liquidityPoolWithdrawResponse.ok) {
-  //   const liquidityPoolWithdrawParsedData = getLiquidityPoolWithdrawParser(
-  //     liquidityPoolWithdrawResponse.data!,
-  //   );
-  //   console.log("liquidityPoolWithdrawParsedData");
-  //   console.log(JSON.stringify(liquidityPoolWithdrawParsedData, null, 2) + "\n");
-  // }
+  if (liquidityPoolWithdrawResponse.ok) {
+    const liquidityPoolWithdrawParsedData = getLiquidityPoolWithdrawParser(
+      liquidityPoolWithdrawResponse.data!,
+    );
+    console.log("liquidityPoolWithdrawParsedData");
+    console.log(JSON.stringify(liquidityPoolWithdrawParsedData, null, 2) + "\n");
+  }
 
-  // //Liquidity Pool Deposit
-  // const liquidityPoolDepositResponse = await mercuryInstance.getLiquidityPoolDeposit({
-  //   publicKey,
-  // });
+  //Liquidity Pool Deposit
+  const liquidityPoolDepositResponse = await mercuryInstance.getLiquidityPoolDeposit({
+    publicKey,
+  });
 
-  // if (liquidityPoolDepositResponse.ok) {
-  //   const liquidityPoolDepositParsedData = getLiquidityPoolDepositParser(
-  //     liquidityPoolDepositResponse.data!,
-  //   );
-  //   console.log("liquidityPoolDepositParsedData");
-  //   console.log(JSON.stringify(liquidityPoolDepositParsedData, null, 2) + "\n");
-  // }
+  if (liquidityPoolDepositResponse.ok) {
+    const liquidityPoolDepositParsedData = getLiquidityPoolDepositParser(
+      liquidityPoolDepositResponse.data!,
+    );
+    console.log("liquidityPoolDepositParsedData");
+    console.log(JSON.stringify(liquidityPoolDepositParsedData, null, 2) + "\n");
+  }
 
-  // const getContractEventsRes = await mercuryInstance.getContractEvents({
-  //   contractId: routerContractAddress,
-  // });
-  // const parsedContractEvents = getContractEventsParser(getContractEventsRes.data!);
-  // const eventByPublicKey = parsedContractEvents.filter((event) => event.to === publicKey);
-  // console.log("eventByPublicKey");
-  // console.log(JSON.stringify(eventByPublicKey, null, 2) + "\n");
+  const getContractEventsRes = await mercuryInstance.getContractEvents({
+    contractId: routerContractAddress,
+  });
+  const parsedContractEvents = getContractEventsParser(getContractEventsRes.data!);
+  const eventByPublicKey = parsedContractEvents.filter((event) => event.to === publicKey);
+  console.log("eventByPublicKey");
+  console.log(JSON.stringify(eventByPublicKey, null, 2) + "\n");
 })();

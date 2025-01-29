@@ -1,8 +1,8 @@
 import type { GetContractEventsResponse } from "../../types";
-import { Node } from "../../types/getContractEvents";
+import type { ContractEvent, Node } from "../../types/getContractEvents";
 import { parseXdr } from "../convert";
 
-export const getContractEventsParser = (data: GetContractEventsResponse) =>
+export const getContractEventsParser = (data: GetContractEventsResponse): ContractEvent[] =>
   data.eventByContractId.nodes.map((node: Node) => {
     const jsData = parseXdr(node.data);
     const baseObject = typeof jsData === "object" && jsData !== null ? jsData : { value: jsData };

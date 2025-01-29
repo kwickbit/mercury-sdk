@@ -28,5 +28,6 @@ export interface SubscribeToLedgerEntriesExpirationArgs {
 }
 
 export interface SubscribeToFullAccountArgs {
+  hydrate?: boolean;
   publicKey: string;
 }
