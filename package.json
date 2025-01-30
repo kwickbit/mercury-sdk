@@ -1,6 +1,6 @@
 {
   "name": "mercury-sdk",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "handles subscriptions, data retrieval and processing of mercury indexer",
   "main": "dist/index.js",
   "repository": "https://github.com/paltalabs/mercury-sdk",
@@ -18,6 +18,9 @@
     "soroban"
   ],
   "types": "dist/index.d.ts",
+  "bin": {
+    "mercury-setup": "./bin/setup.js"
+  },
   "scripts": {
     "build": "tsc --declaration",
     "dev": "ts-node src/dev.ts",
