@@ -1,0 +1,1 @@
+export declare const GET_PATH_PAYMENTS_STRICT_SEND_BY_PUBLIC_KEY: string;

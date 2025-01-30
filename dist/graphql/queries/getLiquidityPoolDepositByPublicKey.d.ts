@@ -1,0 +1,1 @@
+export declare const GET_LIQUIDITY_POOL_DEPOSIT_BY_PUBLIC_KEY: string;

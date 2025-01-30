@@ -1,6 +1,6 @@
 {
   "name": "mercury-sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "handles subscriptions, data retrieval and processing of mercury indexer",
   "main": "dist/index.js",
   "repository": "https://github.com/paltalabs/mercury-sdk",
@@ -17,8 +17,9 @@
     "stellar",
     "soroban"
   ],
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --declaration",
     "dev": "ts-node src/dev.ts",
     "doc": "typedoc --plugin typedoc-plugin-missing-exports",
     "format": "prettier --write ./src",
