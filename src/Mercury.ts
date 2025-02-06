@@ -166,6 +166,9 @@ export class Mercury {
    */
   private async _graphqlRequest<T = any>(args: GraphQLRequestArgs): Promise<ApiResponse<T>> {
     const { body, headers } = args;
+
+    console.log(JSON.stringify(body, (_k, v) => (typeof v === "bigint" ? v.toString() : v), 2));
+
     try {
       const data = await this._graphqlClient.request<T>(
         body.request,

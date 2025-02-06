@@ -128,6 +128,7 @@ class Mercury {
      */
     async _graphqlRequest(args) {
         const { body, headers } = args;
+        console.log(JSON.stringify(body, (_k, v) => (typeof v === "bigint" ? v.toString() : v), 2));
         try {
             const data = await this._graphqlClient.request(body.request, body.variables, headers ?? {
                 Authorization: this._accessToken,
